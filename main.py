@@ -1,17 +1,17 @@
 Candidate_name = input ("Choose candidate: ")
-print("LAZATIN, CARMELO II BAUTISTA")
-print("GONZALES, AURELIO JR. DUEÑAS")
+print("1.) LAZATIN, CARMELO II BAUTISTA")
+print("2.) GONZALES, AURELIO JR. DUEÑAS")
 
-class choice = input("Enter Choice: ")
+choice = input("Enter Choice: ")
 
-while class_choice not in ["1", "2"]:
-    print("Invalaid cjoice. Please choose again")
-    class_choice = input("Choose your candidate: \n1. Lazatin\n2. Gonzales")
+while Candidate_name not in ["1", "2"]:
+    print("Invalid choice. Please choose again")
+    Candidate_name = input("Choose your candidate: \n1. Lazatin\n2. Gonzales")
 
-if class_choice == "1"
-    candidate_class = "Lazatin"
+if Candidate_name == "1":
+    Candidate_name = "Lazatin"
 
-elif class_choice == "2"
-    candidate_choice = "Gonzales"
+elif Candidate_name == "2":
+    Candidate_name = "Gonzales"
 
-candidate = Candidate(candidate_name, candidate_class)
+candidate = Candidate_name(Candidate_name, Candidate_name)
