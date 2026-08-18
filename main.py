@@ -18,7 +18,9 @@ def view_results():
         print("No candidates available.")
         return
 
-    print("\n------ VOTING RESULTS ------")
+    print("\n------- VOTING RESULTS -------")
+    print("Candidates              Votes")
+    print("--------------------------------")
 
     sorted_candidates = sorted(
         candidates,
@@ -33,9 +35,9 @@ def view_results():
 
     winner = sorted_candidates[0]
 
-    print("----------------------------")
+    print("--------------------------------")
     print(f"Total Votes: {total}")
-    print(f"Winner: {winner['name']} with {winner['votes']} vote(s)")
+    print(f"\nWinner: {winner['name']} with {winner['votes']} votes!")
 
 
 view_results()
