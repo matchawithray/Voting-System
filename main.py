@@ -1,12 +1,11 @@
-# mainn tooo
-#Python
-#xyra to ahhh
-#RESULTS SA AKIN
+#Xyra i2
+#python
+
 
 candidates = [
-  {"name": "Alice", "votes": 3},
-  {"name": "Bob", "votes": 2},
-  {"name": "Mesye", "votes": 1}
+  {"name": "Xyra Shannel", "votes": 7},
+  {"name": "Mitchie Mae", "votes": 18},
+  {"name": "Raymart John", "votes": 27}
 ]
 
 def view_results():
@@ -14,7 +13,9 @@ def view_results():
     print("No candidates available.")
     return
 
-  print("\n-----VOTING RESULTS-----")
+  print("\n------VOTING RESULTS------")
+  print("Candidates       Votes")
+  print("-------------------------")
 
   for candidate in candidates:
     print(candidate['name'], '-', candidate['votes'], 'vote(s)')
