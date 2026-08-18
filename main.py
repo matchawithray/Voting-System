@@ -1,18 +1,18 @@
-print("Choose candidates: ")
+candidates = [
+    "BAYLON, REYNEIL BAEZ",
+    "CALUAG, VILMA BALLE",
+    "MANALO, CHERRY DIZON",
+    "HALILI, CHRISTIAN CASTRO"
+]
 
-Candidate_Name["LAZATIN, CARMELLO BAUTISTA"]
-Candidate_Name2["GONZALES, AURELIO"]
-Candidate_Name3["SALI, IMRAKI SAMPUTOH"]
-if Candidate_Name == "1":
-    print("LAZATIN, CARMELLO BAUTISTA")
-else if Candidates_Name == "2":
-    print("GONZALES, AURELIO")
-else if Candidates_Name == "3":
-    print("SALI, IMRAKI SAMPUTOH")
+votes = [0, 0, 0, 0]
+
+for i, name in enumerate(candidates, 1):
+    print(i, name)
+
+choice = int(input("Enter your choice: "))
 
 
-else
-print("Invalid input!")
 
 
  
