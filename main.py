@@ -3,21 +3,39 @@
 
 
 candidates = [
-  {"name": "Xyra Shannel", "votes": 7},
-  {"name": "Mitchie Mae", "votes": 18},
-  {"name": "Raymart John", "votes": 27}
+    {"name": "Xyra Shannel", "votes": 7},
+    {"name": "Mitchie Mae", "votes": 18},
+    {"name": "Raymart John", "votes": 27}
 ]
 
+
+def get_votes(candidate):
+    return candidate["votes"]
+
+
 def view_results():
-  if len(candidates) == 0:
-    print("No candidates available.")
-    return
+    if not candidates:
+        print("No candidates available.")
+        return
 
-  print("\n------VOTING RESULTS------")
-  print("Candidates       Votes")
-  print("-------------------------")
+    print("\n------ VOTING RESULTS ------")
 
-  for candidate in candidates:
-    print(candidate['name'], '-', candidate['votes'], 'vote(s)')
+    sorted_candidates = sorted(
+        candidates,
+        key=get_votes,
+        reverse=True
+    )
+
+    for candidate in sorted_candidates:
+        print(f"{candidate['name']:<20} {candidate['votes']} vote(s)")
+
+    total = sum(candidate["votes"] for candidate in candidates)
+
+    winner = sorted_candidates[0]
+
+    print("----------------------------")
+    print(f"Total Votes: {total}")
+    print(f"Winner: {winner['name']} with {winner['votes']} vote(s)")
+
 
 view_results()
