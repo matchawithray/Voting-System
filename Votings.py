@@ -35,6 +35,7 @@ def cast_vote():
         print("No candidates available.")
         return
 
+<<<<<<< HEAD
     # Keep the voting system running
     while True:
 
@@ -109,6 +110,69 @@ def cast_vote():
         print("\nReady for the next vote.")
 
         continue
+=======
+    print("\n===== CANDIDATES =====")
+
+    for i, candidate in enumerate(candidates):
+        print(i + 1, "-", candidate["name"])
+
+    # Keep asking for Voter ID until it is registered
+    while True:
+
+        voter_id = input("\nEnter Voter ID: ").strip()
+
+        selected_voter = None
+
+        # Search for the voter
+        for voter in voters:
+            if voter["id"] == voter_id:
+                selected_voter = voter
+                break
+
+        # If voter is not registered, ask again
+        if selected_voter is None:
+            print("Voter is not registered.")
+            print("Please enter a registered Voter ID.")
+            continue
+
+        # Voter is registered
+        break
+
+    # Check if voter already voted
+    if selected_voter["has_voted"]:
+        print("You have already voted!")
+        return
+
+    # Ask voter to choose a candidate
+    while True:
+
+        try:
+            choice = int(
+                input("Enter Candidate Number to Vote: ")
+            )
+
+            if 1 <= choice <= len(candidates):
+
+                candidates[choice - 1]["votes"] += 1
+                selected_voter["has_voted"] = True
+
+                print("\n------------------------------")
+                print("Vote cast successfully!")
+                print(
+                    "You voted for:",
+                    candidates[choice - 1]["name"]
+                )
+                print("------------------------------")
+
+                break
+
+            else:
+                print("Invalid candidate number.")
+                print("Please choose a valid candidate.")
+
+        except ValueError:
+            print("Please enter a valid number.")
+>>>>>>> 7eca6b7a5f245eea513afcc29165cd9f8df7bede
 
 
 #Start voting
