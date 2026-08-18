@@ -1,19 +1,33 @@
-candidates = [
-  {"name": "Xyra Shannel", "votes": 7},
-  {"name": "Mitchie Mae", "votes": 18},
-  {"name": "Raymart John", "votes": 27}
-]
+from add import candidates
+from Votings import voters, cast_vote
+from result import view_results
 
-def view_results():
-  if len(candidates) == 0:
-    print("No candidates available.")
-    return
 
-  print("\n------VOTING RESULTS------")
-  print("Candidates       Votes")
-  print("-------------------------")
+def main():
+    while True:
+        print("\n==============================")
+        print("        VOTING SYSTEM")
+        print("==============================")
+        print("1. Cast Vote")
+        print("2. View Results")
+        print("3. Exit")
+        print("==============================")
 
-  for candidate in candidates:
-    print(candidate['name'], '-', candidate['votes'], 'vote(s)')
+        choice = input("Choose an option: ").strip()
 
-view_results()
+        if choice == "1":
+            cast_vote(voters, candidates)
+
+        elif choice == "2":
+            view_results(candidates)
+
+        elif choice == "3":
+            print("\nThank you for using the Voting System!")
+            break
+
+        else:
+            print("\nInvalid choice. Please choose 1, 2, or 3.")
+
+
+if __name__ == "__main__":
+    main()
