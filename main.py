@@ -8,20 +8,24 @@ def main():
         print("\n==============================")
         print("        VOTING SYSTEM")
         print("==============================")
-        print("1. Cast Vote")
-        print("2. View Results")
-        print("3. Exit")
+        print("1. Add Candidate ")
+        print("2. Cast Vote")
+        print("3. View Results")
+        print("4. Exit")
         print("==============================")
 
         choice = input("Choose an option: ").strip()
 
         if choice == "1":
+            add_candidate(add, name)
+        
+        if choice == "2":
             cast_vote(voters, candidates)
 
-        elif choice == "2":
+        elif choice == "3":
             view_results(candidates)
 
-        elif choice == "3":
+        elif choice == "4":
             print("\nThank you for using the Voting System!")
             break
 
