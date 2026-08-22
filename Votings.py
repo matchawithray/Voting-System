@@ -90,3 +90,4 @@ def cast_vote(voters, candidates):
 
         except ValueError:
             print("\nPlease enter a valid number.")
+            print("\nPlease enter a valid number.")
