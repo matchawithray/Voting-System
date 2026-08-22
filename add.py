@@ -23,5 +23,10 @@ candidates.append({
 print(candidates)
 
 
+candidates.append({
+    "name": new_candidate,
+    "votes": 0
+})
 
+print(candidates)
  
