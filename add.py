@@ -13,6 +13,10 @@ candidates = [
     }
 ]
 
+def add_candidate(add,name)
+
+
+
 new_candidate = input("Enter a new candidate name: ")
 
 candidates.append({
@@ -20,5 +24,5 @@ candidates.append({
     "votes": 0
 })
 
-print(candidates)
+
  
