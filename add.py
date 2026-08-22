@@ -13,7 +13,6 @@ candidates = [
     }
 ]
 
-def add_candidate(add,name)
 
 
 
@@ -23,6 +22,7 @@ candidates.append({
     "name": new_candidate,
     "votes": 0
 })
+
 
 
  
